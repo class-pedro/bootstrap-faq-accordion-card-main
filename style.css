@@ -1,0 +1,216 @@
+:root {
+    /* Colors */
+
+    /* Text */
+
+    --very-dark-desaturated-blue: hsl(238, 29%, 16%);
+    --soft-red: hsl(14, 88%, 65%);
+
+    /* Background gradient: */
+
+    --soft-violet: hsl(273, 75%, 66%);
+    --soft-blue: hsl(240, 73%, 65%);
+
+    /* Text */
+
+    --very-dark-grayish-blue: hsl(237, 12%, 33%);
+    --dark-grayish-blue: hsl(240, 6%, 50%);
+
+    /* Dividers */
+
+    --light-grayish-blue: hsl(240, 6%, 50%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+body {
+    background-image: linear-gradient(#af67e9,  #6565e7);
+    height: 100vh;
+    /*
+    Refatorado para Bootstrap
+
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    */
+}
+
+main {
+    height: 100%;
+    width: 468px;
+    /*
+    Refatorado para Bootstrap
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    */
+}
+
+section.all-questions::before {
+    content: '';
+    background: url(images/illustration-woman-online-mobile.svg) no-repeat;
+    width: 268px;
+    height: 180px;
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translate(-45%, -60%);
+}
+
+section.all-questions::after {
+    content: '';
+    background: url(images/bg-pattern-mobile.svg) no-repeat;
+    width: 268px;
+    height: 180px;
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translate(-45%, 0%);
+}
+
+section.all-questions {
+    background-color: #fff;
+    width: 80%;
+    padding: 140px 23px 50px 23px;
+    margin-top: 50px;
+    border-radius: 25px;
+    position: relative;
+}
+
+h1.page-title {
+    font-size: 35px;
+    font-weight: 700;
+    text-transform: uppercase;
+    /*
+    Refatorado para Bootstrap
+
+    text-align: center;
+    */
+    color: var(--very-dark-desaturated-blue);
+    margin-bottom: 40px;
+}
+
+
+/* Configuração do Button quando a caixa de resposta está fechada */
+button.collapsed > p.button-text{
+    color: var(--very-dark-grayish-blue);
+    font-size: 14px;
+    margin-top: 10px;
+    margin-right: 10px;
+    font-weight: 400;
+}
+
+button.collapsed:hover > p.button-text {
+    color: var(--soft-red);
+}
+
+
+/* Configuração do Button quando a caixa de resposta está aberta */
+button > p.button-text{
+    color: var(--very-dark-grayish-blue);
+    font-size: 14px;
+    margin-top: 10px;
+    margin-right: 10px;
+    font-weight: 700;
+}
+
+/* Feito fora do bootstrap para facilitar a configuração de vários Botões com apenas um seletor */
+button {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+button::after {
+    display: none;
+}
+
+div.response > p {
+    font-size: 12px;
+    text-align: left;
+    color: var(--light-grayish-blue);
+}
+/* Configurando os efeitos de seleção para quando a caixa de respostas está aberta */
+section#accordionExample.accordion {
+    --bs-accordion-active-bg: #fff;
+    --bs-accordion-btn-focus-box-shadow: 0 rgba(255, 255, 255, 0);
+}
+/* ################################################################################ */
+/* Virando a seta das questions em 180º */
+img.openQuestion {
+    -moz-transform: scaleY(-1);
+    -o-transform: scaleY(-1);
+    -webkit-transform: scaleY(-1);
+    transform: scaleY(-1);
+}
+
+
+
+
+
+
+
+/* Criando responsividade */
+@media only screen and (min-width: 992px) {
+    body {
+        height: 100vh;
+    }
+
+    main {
+        width: 925px;
+        height: 460px;
+        background-color: white;
+        border-radius: 25px;
+    }
+
+    section.all-questions {
+        width: 925px;
+        height: 460px;
+        padding: 70px 23px 0px 23px;
+        margin-top: 0px;
+        background: url(images/illustration-woman-online-desktop.svg) bottom 50px left -50px no-repeat, url(images/bg-pattern-desktop.svg) bottom -150px left -542px no-repeat;
+    }
+
+    section.all-questions::before {
+        content: '';
+        background: url(images/illustration-box-desktop.svg) no-repeat;
+        width: 268px;
+        height: 180px;
+        position: absolute;
+        top: 37%;
+        left: -7.7%;
+        animation: floating 3s ease-in-out infinite;
+    }
+
+    div.desktop-wth {
+        width: 360px;
+        margin-left: 53%;
+    }
+
+    h1.page-title {
+        text-align: left;
+        margin-left: 53%;
+    }
+
+    div.response > p {
+        margin-top: 5px;
+        margin-right: 10px;
+    }
+
+    /* Configurando a animação do bloco */
+    @keyframes floating {
+        0% {transform: translate(0, 0px);}
+        50% {transform: translate(0, 15px);}
+        100% {transform: translate(0, 0px);}
+    }
+
+    section.all-questions::after {
+        display: none;
+    }
+}

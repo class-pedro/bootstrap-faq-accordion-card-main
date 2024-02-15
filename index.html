@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600;700&family=Kumbh+Sans:wght@400;700&display=swap"
+    rel="stylesheet">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <title>Frontend Mentor | FAQ Accordion Card</title>
+</head>
+
+<body class="d-flex justify-content-center align-items-center">
+
+  <main class="d-flex flex-column justify-content-center align-items-center">
+
+    <!-- Accordion feito com Bootstrap -->
+    <section class="accordion all-questions" id="accordionExample">
+      <h1 class="text-center page-title">FAQ</h1>
+
+      <!-- Item 1 -->
+      <div class="accordion-item border-0 desktop-wth">
+        <h2 class="accordion-header question-title">
+          <button class="accordion-button collapsed p-0" type="button" data-bs-toggle="collapse"
+            data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+            <p class="button-text">How many team members can I invite?</p>
+            <span class="b-0 p-0 m-0 parent-arrow"><img src="images/icon-arrow.svg" alt="Ícone de abertura da resposta."></span>
+          </button>
+        </h2>
+        <div id="collapseOne" class="accordion-collapse collapse pt-2" data-bs-parent="#accordionExample">
+          <div class="accordion-body p-0 response">
+            <p>
+              You can invite up to 2 additional users on the Free plan. There is no limit on team members for the
+              Premium plan.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 2 -->
+      <div class="accordion-item border-start-0 border-bottom-0 border-top border-end-0 desktop-wth">
+        <h2 class="accordion-header question-title">
+          <button class="accordion-button collapsed p-0" type="button" data-bs-toggle="collapse"
+            data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+            <p class="button-text">What is the maximum file upload size?</p>
+            <span class="b-0 p-0 m-0 parent-arrow"><img src="images/icon-arrow.svg" alt="Ícone de abertura da resposta."></span>
+          </button>
+        </h2>
+        <div id="collapseTwo" class="accordion-collapse collapse pt-2" data-bs-parent="#accordionExample">
+          <div class="accordion-body p-0 response">
+            <p>No more than 2GB. All files in your account must fit your allotted storage space.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 3 -->
+      <div class="accordion-item border-start-0 border-bottom-0 border-top border-end-0 desktop-wth">
+        <h2 class="accordion-header question-title">
+          <button class="accordion-button collapsed p-0" type="button" data-bs-toggle="collapse"
+            data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+            <p class="button-text">How do I reset my password?</p>
+            <span class="b-0 p-0 m-0 parent-arrow"><img src="images/icon-arrow.svg" alt="Ícone de abertura da resposta."></span>
+          </button>
+        </h2>
+        <div id="collapseThree" class="accordion-collapse collapse pt-2" data-bs-parent="#accordionExample">
+          <div class="accordion-body p-0 response">
+            <p>
+              Click “Forgot password” from the login page or “Change password” from your profile page. A reset link
+              will be emailed to you.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 4 -->
+      <div class="accordion-item border-start-0 border-bottom-0 border-top border-end-0 desktop-wth">
+        <h2 class="accordion-header question-title">
+          <button class="accordion-button collapsed p-0" type="button" data-bs-toggle="collapse"
+            data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+            <p class="button-text">Can I cancel my subscription?</p>
+            <span class="b-0 p-0 m-0 parent-arrow"><img src="images/icon-arrow.svg" alt="Ícone de abertura da resposta."></span>
+          </button>
+        </h2>
+        <div id="collapseFour" class="accordion-collapse collapse pt-2" data-bs-parent="#accordionExample">
+          <div class="accordion-body p-0 response">
+            <p>Yes! Send us a message and we’ll process your request no questions asked.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 5 -->
+      <div class="accordion-item border-start-0 border-bottom-0 border-top border-end-0 desktop-wth">
+        <h2 class="accordion-header question-title">
+          <button class="accordion-button collapsed p-0" type="button" data-bs-toggle="collapse"
+            data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+            <p class="button-text">Do you provide additional support?</p>
+            <span class="b-0 p-0 m-0 parent-arrow"><img src="images/icon-arrow.svg" alt="Ícone de abertura da resposta."></span>
+          </button>
+        </h2>
+        <div id="collapseFive" class="accordion-collapse collapse pt-2" data-bs-parent="#accordionExample">
+          <div class="accordion-body p-0 response">
+            <p>Chat and email support is available 24/7. Phone lines are open during normal business hours.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="app.js" defer></script>
+</body>
+
+</html>
